@@ -129,15 +129,6 @@ const Degree = styled.div`
   }
 `;
 
-const Notable = styled.div`
-  font-size: 16px;
-  font-weight: 500;
-  color: ${({ theme }) => theme.subText + 99};
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
-`;
-
 const Date = styled.div`
   font-size: 12px;
   font-weight: 400;
@@ -164,26 +155,21 @@ const SkillList = styled.div`
   margin-bottom: 20px;
 `;
 
-const EducationCard = ({ education }) => {
+const CertificationCard = ({ certification }) => {
   return (
     <Card>
       <Top>
-        <Image src={education.img} />
+        <Image src={certification.img} />
         <Body>
-          <Name>{education.university}</Name>
-          <Degree>{education.degree}</Degree>
-          <Date>{education.date}</Date>
+          <Name>{certification.name}</Name>
+          <Degree>{certification.issuedBy}</Degree>
+          <Degree>{certification.credentialId}</Degree>
+          <Date>{certification.date}</Date>
         </Body>
       </Top>
-      <Notable>Notable Courses Completed: </Notable>
-      {/* <Description> */}
-      <SkillList>
-        {education?.majorCourses?.map((course) => (<SkillItem key={course.id}>{course.name}</SkillItem>))}
-      {/* </Description> */}
-      </SkillList>
     </Card>
   );
 };
 
-export default EducationCard;
+export default CertificationCard;
 

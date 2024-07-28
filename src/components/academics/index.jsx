@@ -39,7 +39,7 @@ const Academics = () => {
   }
 
   return (
-    <Container id="education">
+    <Container id="academics">
       <Wrapper>
         <Title>Academic Achievements</Title>
         <Desc>
