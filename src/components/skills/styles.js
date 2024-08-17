@@ -7,6 +7,10 @@ export const Container = styled.div`
   position: relative;
   z-index: 1;
   align-items: center;
+  padding: 20px 0px 100px 0px;
+  @media (max-width: 960px) {
+    padding: 0px;
+  }
 `;
 
 export const Wrapper = styled.div`

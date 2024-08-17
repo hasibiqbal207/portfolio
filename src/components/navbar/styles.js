@@ -2,7 +2,7 @@ import { Link as LinkRouter } from "react-router-dom";
 import styled from "styled-components";
 
 export const Nav = styled.div`
-  background-color: ${({ theme }) => theme.card_light};
+  background-color: black;
   height: 80px;
   display: flex;
   align-items: center;
@@ -29,15 +29,33 @@ export const NavbarContainer = styled.div`
 
 export const NavLogo = styled(LinkRouter)`
   width: 80%;
-  padding: 0 6px;
+  padding-left: 20px;
   display: flex;
   justify-content: start;
+  cursor: pointer;
   align-items: center;
   text-decoration: none;
+  color: ${({ theme }) => theme.text_primary};
+  transition: color 0.2s ease-in-out;
+  :hover {
+    color: ${({ theme }) => theme.primary};
+  }
   @media (max-width: 640px) {
     padding: 0 0px;
   }
 `;
+
+export const SocialMediaIcon = styled.a`
+  display: inline-block;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  color: ${({ theme }) => theme.text_primary};
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: ${({ theme }) => theme.primary};
+  }
+`;
+
 export const Span = styled.div`
   padding: 0 4px;
   font-weight: bold;

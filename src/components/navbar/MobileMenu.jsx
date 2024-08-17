@@ -15,15 +15,6 @@ const MobileMenuComponent = ({ isOpen, setIsOpen }) => {
         </MobileLink>
 
         <MobileLink
-          href="#education"
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
-        >
-          Education
-        </MobileLink>
-
-        <MobileLink
           href="#skills"
           onClick={() => {
             setIsOpen(!isOpen);
@@ -42,13 +33,22 @@ const MobileMenuComponent = ({ isOpen, setIsOpen }) => {
         </MobileLink>
 
         <MobileLink
+          href="#academics"
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
+          Academics
+        </MobileLink>
+
+        {/* <MobileLink
           href="#blog"
           onClick={() => {
             setIsOpen(!isOpen);
           }}
         >
           Blog
-        </MobileLink>
+        </MobileLink> */}
 
         <MobileLink
           href="#contact"

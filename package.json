@@ -20,6 +20,7 @@
     "react-dom": "^18.3.1",
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.3.0",
+    "react-toastify": "^10.0.5",
     "styled-components": "^5.3.5",
     "typewriter-effect": "^2.19.0"
   },

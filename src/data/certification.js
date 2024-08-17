@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const certification = [
   {
     id: 0,
@@ -5,6 +7,7 @@ export const certification = [
     name: "Meta Front-End Developer Professional Certiﬁcate",
     issuedBy: "Meta, ",
     credentialId: "Credential ID: JTQPSX9HFH63",
+    link: "https://www.coursera.org/account/accomplishments/professional-cert/JTQPSX9HFH63",
     date: "March 2024",
     category: "certification",
   },
@@ -14,6 +17,7 @@ export const certification = [
     name: "Deep Learning Specialization",
     issuedBy: "Coursera",
     credentialId: "Credential ID: 3EXAZNYXHMEA",
+    link: "https://www.coursera.org/account/accomplishments/specialization/certificate/3EXAZNYXHMEA",
     date: "May 2018",
     category: "certification",
   },
@@ -23,6 +27,7 @@ export const certification = [
     name: "Machine Learning",
     issuedBy: "Coursera",
     credentialId: "Credential ID: 984EYX6GVUHJ",
+    link: "https://www.coursera.org/account/accomplishments/verify/984EYX6GVUHJ",
     date: "April 2017",
     category: "certification",
   },

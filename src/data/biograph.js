@@ -11,6 +11,6 @@ export const Bio = {
     mindset, I strive to stay updated, keeping up with the latest trends and best practices in the industry.
   `,
   github: "https://github.com/hasibiqbal207",
-  resume: "/public/pdfs/resume.pdf",
+  resume: "/pdfs/resume.pdf",
   linkedin: "https://www.linkedin.com/in/hasib-iqbal/",
 };

@@ -35,10 +35,11 @@ function App() {
         <Body>
           <HeroSection />
 
-          <Academics />
           <Skills />
-
+          
           <Projects openModal={openModal} setOpenModal={setOpenModal} />
+
+          <Academics />
 
           <Contact />
 

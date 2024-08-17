@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import Timeline from "@mui/lab/Timeline";
-import TimelineItem from "@mui/lab/TimelineItem";
-import TimelineContent from "@mui/lab/TimelineContent";
+
 import {
   Container,
   Wrapper,
   Title,
   Desc,
-  TimelineSection,
   ToggleButton,
   ToggleButtonGroup,
   Divider,
@@ -27,7 +24,6 @@ const Academics = () => {
       <ToggleButton active={toggle === value} onClick={() => setToggle(value)}>
         {label}
       </ToggleButton>
-      <Divider />
     </>
   );
 
@@ -48,30 +44,19 @@ const Academics = () => {
 
         <ToggleButtonGroup>
           {renderToggleButton("education", "Education")}
+          <Divider />
           {renderToggleButton("certification", "Certifications")}
         </ToggleButtonGroup>
 
-        <TimelineSection>
-          <Timeline>
-            {toggle === "education" &&
-              filtereSection.map((education) => (
-                <TimelineItem key={education.id}>
-                  <TimelineContent sx={{ py: "12px", px: 2 }}>
-                    <EducationCard education={education} />
-                  </TimelineContent>
-                </TimelineItem>
-              ))}
+        {toggle === "education" &&
+          filtereSection.map((education) => (
+            <EducationCard education={education} />
+          ))}
 
-            {toggle === "certification" &&
-              filtereSection.map((certification) => (
-                <TimelineItem key={certification.id}>
-                  <TimelineContent sx={{ py: "12px", px: 2 }}>
-                    <CertificationCard certification={certification} />
-                  </TimelineContent>
-                </TimelineItem>
-              ))}
-          </Timeline>
-        </TimelineSection>
+        {toggle === "certification" &&
+          filtereSection.map((certification) => (
+            <CertificationCard certification={certification} />
+          ))}
       </Wrapper>
     </Container>
   );

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
-import { Snackbar } from "@mui/material";
+import Snackbar from "@mui/material/Snackbar";
 
 import {
   Container,
@@ -25,6 +25,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     emailjs.sendForm(serviceId, templateId, form.current, userId).then(
       (result) => {
         setOpen(true);
@@ -68,12 +69,28 @@ const Contact = () => {
           />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
+
         <Snackbar
           open={open}
-          autoHideDuration={6000}
+          autoHideDuration={4000}
           onClose={() => setOpen(false)}
           message="Email sent successfully!"
           severity="success"
+          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+          ContentProps={{
+            sx: {
+              border: "1px solid black",
+              borderRadius: "40px",
+              color: "black",
+              bgcolor: "lightgreen",
+              textAlign: "center",
+              width: "100%",
+              "& .MuiSnackbarContent-message": {
+                width: "inherit",
+                textAlign: "center",
+              },
+            },
+          }}
         />
       </Wrapper>
     </Container>

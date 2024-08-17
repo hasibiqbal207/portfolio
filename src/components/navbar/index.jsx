@@ -29,10 +29,10 @@ const Navbar = () => {
 
         <ButtonContainer>
           {/* Dark & Light Theme Switcher */}
-          <ThemeSwitch />
+          {/* <ThemeSwitch /> */}
 
           {/* Language Selector */}
-          <LanguageSelector />
+          {/* <LanguageSelector /> */}
         </ButtonContainer>
 
         {/* Navigation Menu on Mobile Device */}

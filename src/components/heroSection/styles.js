@@ -129,18 +129,29 @@ export const Title = styled.div`
 
 export const TextLoop = styled.div`
   font-weight: 600;
-  font-size: 32px;
+  font-size: 1.5rem;
+
   display: flex;
   gap: 12px;
   color: ${({ theme }) => theme.text_primary};
   line-height: 68px;
+  overflow-x: auto;
   @media (max-width: 960px) {
     text-align: center;
+    margin-bottom: 16px;
+    overflow: hidden;
+
+    font-size: 1.25rem;
+    line-height: 1.5rem; /* Adjust based on your font-size */
+    height: 3rem; /* Adjust based on your font-size */
   }
   @media (max-width: 640px) {
-    font-size: 22px;
-    line-height: 48px;
     margin-bottom: 16px;
+    overflow: hidden;
+
+    font-size: 1.25rem;
+    line-height: 1.5rem; /* Adjust based on your font-size */
+    height: 3rem; /* Adjust based on your font-size */
   }
 `;
 
@@ -150,18 +161,18 @@ export const Span = styled.span`
 `;
 
 export const SubTitle = styled.div`
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 1.25rem;
+  line-height: 2rem;
   margin-bottom: 42px;
   color: ${({ theme }) => theme.text_primary + 95};
 
   @media (max-width: 960px) {
+    font-size: 1.1rem;
     text-align: center;
   }
 
   @media (max-width: 640px) {
-    font-size: 16px;
-    line-height: 32px;
+    font-size: 1rem;
   }
 `;
 

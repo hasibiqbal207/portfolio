@@ -16,6 +16,8 @@ import {
   Member,
   MemberImage,
   MemberName,
+  ButtonGroup,
+  Button,
 } from "./styles";
 
 const ProjectDetails = ({ openModal, setOpenModal }) => {
@@ -40,8 +42,8 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
           <Title>{project?.title}</Title>
           <Date>{project.date}</Date>
           <Tags>
-            {project?.tags.map((tag) => (
-              <Tag>{tag}</Tag>
+            {project?.tags.map((tag, index) => (
+              <Tag key={index}>{tag}</Tag>
             ))}
           </Tags>
           <Desc>{project?.description}</Desc>
@@ -50,7 +52,7 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
               <Label>Members</Label>
               <Members>
                 {project?.member.map((member) => (
-                  <Member>
+                  <Member key={member.name}>
                     <MemberImage src={member.img} />
                     <MemberName>{member.name}</MemberName>
                     <a
@@ -76,9 +78,9 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
             <Button dull href={project?.github} target="new">
               View Code
             </Button>
-            <Button href={project?.webapp} target="new">
+            {project?.webapp && <Button href={project?.webapp} target="new">
               View Live App
-            </Button>
+            </Button>}
           </ButtonGroup>
         </Wrapper>
       </Container>

@@ -9,10 +9,6 @@ export const education = [
     category: "education",
     majorCourses: [
       {
-        id: 0,
-        name: "Global Distributed Software Development",
-      },
-      {
         id: 1,
         name: "Distributed Applications",
       },
@@ -31,6 +27,10 @@ export const education = [
       {
         id: 5,
         name: "Machine Learning",
+      },
+      {
+        id: 6,
+        name: "Global Distributed Software Development",
       },
     ],
   },
@@ -52,45 +52,15 @@ export const education = [
       },
       {
         id: 2,
-        name: "Software Engineering and Information Systems",
-      },
-      {
-        id: 3,
         name: "Computer Networks",
       },
       {
-        id: 4,
-        name: "Operating Systems",
-      },
-    ],
-  },
-  {
-    id: 3,
-    img: '/images/university/KUET-logo.png',
-    university: "Khulna University of Engineering & Technology, Bangladesh.",
-    degree: "Bachelor of Science (BSc) in Computer Science and Engineering",
-    date: "Apr 2015 - Feb 2019",
-    category: "certifications",
-    majorCourses: [
-      {
-        id: 0,
-        name: "Data Structures and Algorithms",
-      },
-      {
-        id: 1,
-        name: "Algorithm Analysis and Design",
-      },
-      {
-        id: 2,
-        name: "Software Engineering and Information Systems",
-      },
-      {
         id: 3,
-        name: "Computer Networks",
+        name: "Operating Systems",
       },
       {
         id: 4,
-        name: "Operating Systems",
+        name: "Software Engineering and Information Systems",
       },
     ],
   },

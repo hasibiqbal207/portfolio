@@ -17,28 +17,28 @@ const Projects = ({ openModal, setOpenModal }) => {
 
   const renderToggleButton = (value, label) => (
     <>
-      <ToggleButton
-        active={toggle === value}
-        onClick={() => setToggle(value)}
-      >
+      <ToggleButton active={toggle === value} onClick={() => setToggle(value)}>
         {label}
       </ToggleButton>
-      <Divider />
     </>
   );
 
   const filteredProjects =
-    toggle === "all" ? projects : projects.filter((item) => item.category === toggle);
+    toggle === "all"
+      ? projects
+      : projects.filter((item) => item.category === toggle);
 
   return (
     <Container id="projects">
       <Wrapper>
         <Title>Projects</Title>
         <Desc>
-          I have worked on a wide range of projects. From web apps to android apps. Here are some of my projects.
+          I have worked on a wide range of projects. From web apps to android
+          apps. Here are some of my projects.
         </Desc>
         <ToggleButtonGroup>
           {renderToggleButton("all", "All")}
+          <Divider />
           {renderToggleButton("web app", "WEB APP'S")}
         </ToggleButtonGroup>
         <CardContainer>

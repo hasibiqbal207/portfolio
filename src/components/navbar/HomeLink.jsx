@@ -8,16 +8,9 @@ const HomeLink = () => {
   };
 
   return (
-    <NavLogo>
-      <FaHome
-        onClick={scrollToTop}
-        style={{
-          display: "flex",
-          color: "white",
-          cursor: "pointer",
-          scale: "1.5",
-        }}
-      />
+    <NavLogo onClick={scrollToTop}>
+      <FaHome 
+        size="1.5em" />
     </NavLogo>
   );
 };

@@ -7,7 +7,8 @@ export const Container = styled.div`
   position: relative;
   z-index: 1;
   align-items: center;
-  padding: 0px 0px 60px 0px;
+  padding: 20px 0px 100px 0px;
+
   @media (max-width: 960px) {
     padding: 0px;
   }
@@ -51,20 +52,6 @@ export const Desc = styled.div`
   }
 `;
 
-export const TimelineSection = styled.div`
-  width: 100%;
-  max-width: 1000px;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  @media (max-width: 660px) {
-    align-items: end;
-  }
-`;
-
 export const ToggleButtonGroup = styled.div`
   display: flex;
   border: 1.5px solid ${({ theme }) => theme.primary};
@@ -85,7 +72,7 @@ export const ToggleButton = styled.div`
   ${({ active, theme }) =>
     active &&
     `
-    background: ${theme.primary + 20};
+    background: ${theme.primary + 25};
     `}
   &:hover {
     background: ${({ theme }) => theme.primary + 8};

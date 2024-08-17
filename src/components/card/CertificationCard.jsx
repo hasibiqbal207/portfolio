@@ -129,6 +129,16 @@ const Degree = styled.div`
   }
 `;
 
+const Link = styled.a`
+  font-size: 14px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_secondary + 99};
+  text-decoration: none; 
+  @media only screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+`;
+
 const Date = styled.div`
   font-size: 12px;
   font-weight: 400;
@@ -163,7 +173,7 @@ const CertificationCard = ({ certification }) => {
         <Body>
           <Name>{certification.name}</Name>
           <Degree>{certification.issuedBy}</Degree>
-          <Degree>{certification.credentialId}</Degree>
+          <Degree>{certification.credentialId} | <Link href={certification.link} target="_blank">Verify</Link></Degree>
           <Date>{certification.date}</Date>
         </Body>
       </Top>
@@ -172,4 +182,3 @@ const CertificationCard = ({ certification }) => {
 };
 
 export default CertificationCard;
-
