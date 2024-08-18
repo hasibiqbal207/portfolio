@@ -25,8 +25,25 @@ const Wrapper = styled.div`
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%);
 `
+
+function isNighttime() {
+  const currentHour = new Date().getHours(); // Get the current hour (0-23)
+  
+  // Define daylight hours (e.g., 6 AM to 6 PM)
+  const startDay = 6; // 6 AM
+  const endDay = 18; // 6 PM
+  
+  // Check if current hour is within daylight hours
+  if (currentHour >= startDay && currentHour < endDay) {
+    return false;
+  }
+
+  // Otherwise, return false
+  return true;
+}
+
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(isNighttime());
   const [openModal, setOpenModal] = useState({ state: false, project: null });
   return (
     <ThemeProvider theme={darkMode ? theme.themes.dark : theme.themes.light}>

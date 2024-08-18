@@ -1,10 +1,12 @@
 import React from "react";
-import { MobileMenu, MobileLink } from "./styles";
+import { MobileMenu, MobileLink, MobileMenuItems } from "./styles";
+import ThemeSwitch from "./ThemeSwitch";
+import { Scale } from "@mui/icons-material";
 
-const MobileMenuComponent = ({ isOpen, setIsOpen }) => {
+const MobileMenuComponent = ({ menuRef, isOpen, setIsOpen, darkMode, setDarkMode }) => {
   return (
     isOpen && (
-      <MobileMenu isOpen={isOpen}>
+      <MobileMenu ref={menuRef} isOpen={isOpen}>
         <MobileLink
           href="#about"
           onClick={() => {
@@ -58,6 +60,11 @@ const MobileMenuComponent = ({ isOpen, setIsOpen }) => {
         >
           Contact
         </MobileLink>
+
+        <MobileMenuItems>
+          <ThemeSwitch darkMode={darkMode} setDarkMode={setDarkMode}/>
+        </MobileMenuItems>
+
       </MobileMenu>
     )
   );

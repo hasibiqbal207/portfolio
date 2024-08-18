@@ -40,6 +40,7 @@ const theme = {
       subText: "#14AFB7",
       lightIcon: "#FDB813",
       darkIcon: "#e5e5e5",
+      mobileMenuBG: "#000000",
     },
     light: {
       bg: "#E1E1DD",
@@ -52,6 +53,7 @@ const theme = {
       button: "#5c5b5b",
       lightIcon: "#FF5722",
       darkIcon: "#B0BEC5",
+      mobileMenuBG: "#E1E1DD",
     },
   },
 };

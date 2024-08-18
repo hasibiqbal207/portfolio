@@ -151,23 +151,22 @@ export const MobileMenu = styled.div`
   right: 0;
   width: 100%;
   padding: 12px 40px 24px 40px;
-  background: ${({ theme }) => theme.card_light + 99};
+  background: ${({ theme }) => theme.mobileMenuBG};
   transition: all 0.6s ease-in-out;
   transform: ${({ isOpen }) =>
     isOpen ? "translateY(0)" : "translateY(-100%)"};
   border-radius: 0 0 20px 20px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
+  // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  opacity: ${({ isOpen }) => (isOpen ? "85%" : "0")};
   z-index: ${({ isOpen }) => (isOpen ? "1000" : "-1000")};
 `;
 
-export const MobileMenuItems = styled.ul`
+export const MobileMenuItems = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: 32px;
-  list-style: none;
+  gap: 8px;
   width: 100%;
   height: 100%;
 `;
@@ -241,4 +240,11 @@ export const CustomLightModeIcon = styled(LightModeIcon)`
 
 export const CustomDarkModeIcon = styled(DarkModeIcon)`
   color: ${({ theme }) => theme.darkIcon};
+`;
+
+export const ThemeSwitchWrapper = styled.div`
+  @media (max-width: 768px) {
+    scale: 0.8;
+    transform: translateX(-25px);
+  }
 `;

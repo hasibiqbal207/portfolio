@@ -48,25 +48,34 @@ const Contact = () => {
 
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email</ContactTitle>
-          <ContactInput placeholder="Name" type="text" name="name" required />
+          <ContactInput 
+            placeholder="Name" 
+            type="text" 
+            name="name" 
+            required 
+          />
+
           <ContactInput
             placeholder="Email"
             type="email"
             name="email"
             required
           />
+
           <ContactInput
             placeholder="Subject"
             type="text"
             name="subject"
             required
           />
+
           <ContactInputMessage
             placeholder="Message"
             rows="4"
             name="message"
             required
           />
+          
           <ContactButton type="submit" value="Send" />
         </ContactForm>
 

@@ -2,7 +2,7 @@
 export const education = [
   {
     id: 0,
-    img: '/images/university/hochschule_fulda_logo.jpeg',
+    img: '/images/university/hochschule_fulda_logo.png',
     university: "Fulda University of Applied Sciences, Germany.",
     degree: "MSc in Global Software Development",
     date: "Oct 2020 - Present",

@@ -5,37 +5,39 @@ import {
   Container,
   Wrapper,
   Title,
-  Desc,
-  SkillsContainer,
-  Skill,
+  Description,
+  SkillContainer,
+  SkillCard,
   SkillTitle,
   SkillList,
   SkillItem,
   SkillImage,
 } from "./styles.js";
+
 const Skills = () => {
   return (
     <Container id="skills">
       <Wrapper>
         <Title>Skills</Title>
-        <Desc>
+        <Description>
           Here are some of my skills on which I have been working on
-        </Desc>
-        <SkillsContainer>
-          {skillTypes.map((skillType) => (
-            <Skill key={skillType.id}>
-              <SkillTitle>{skillType.title}</SkillTitle>
+        </Description>
+
+        <SkillContainer>
+          {skillTypes.map((skillByType) => (
+            <SkillCard key={skillByType.id}>
+              <SkillTitle>{skillByType.title}</SkillTitle>
               <SkillList>
-                {skillType.skills.map((skill) => (
+                {skillByType.skills.map((skill) => (
                   <SkillItem key={skill.id}>
                     <SkillImage src={skill.image} />
                     {skill.name}
                   </SkillItem>
                 ))}
               </SkillList>
-            </Skill>
+            </SkillCard>
           ))}
-        </SkillsContainer>
+        </SkillContainer>
       </Wrapper>
     </Container>
   );

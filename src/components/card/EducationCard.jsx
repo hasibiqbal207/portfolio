@@ -67,11 +67,13 @@ const Card = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
+  margin-bottom: 15px;
   transition: all 0.3s ease-in-out;
   &:hover {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+
   }
   @media only screen and (max-width: 768px) {
     padding: 10px;
@@ -97,7 +99,8 @@ const Top = styled.div`
 
 const Image = styled.img`
   height: 50px;
-  background-color: #000;
+    background-color: ${({ theme }) => theme.bg};
+
   border-radius: 10px;
   margin-top: 4px;
   @media only screen and (max-width: 768px) {

@@ -41,7 +41,7 @@ export const Title = styled.div`
   }
 `;
 
-export const Desc = styled.div`
+export const Description = styled.div`
   font-size: 18px;
   text-align: center;
   max-width: 600px;
@@ -82,6 +82,7 @@ export const ToggleButton = styled.div`
     border-radius: 4px;
   }
 `;
+
 export const Divider = styled.div`
   width: 1.5px;
   background: ${({ theme }) => theme.primary};

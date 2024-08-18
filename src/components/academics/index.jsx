@@ -4,7 +4,7 @@ import {
   Container,
   Wrapper,
   Title,
-  Desc,
+  Description,
   ToggleButton,
   ToggleButtonGroup,
   Divider,
@@ -38,9 +38,9 @@ const Academics = () => {
     <Container id="academics">
       <Wrapper>
         <Title>Academic Achievements</Title>
-        <Desc>
+        <Description>
           Here is a list of my academic achievements and certifications.
-        </Desc>
+        </Description>
 
         <ToggleButtonGroup>
           {renderToggleButton("education", "Education")}
@@ -50,12 +50,12 @@ const Academics = () => {
 
         {toggle === "education" &&
           filtereSection.map((education) => (
-            <EducationCard education={education} />
+            <EducationCard education={education} key={education.id}/>
           ))}
 
         {toggle === "certification" &&
           filtereSection.map((certification) => (
-            <CertificationCard certification={certification} />
+            <CertificationCard certification={certification} key={certification.id}/>
           ))}
       </Wrapper>
     </Container>
