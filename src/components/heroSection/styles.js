@@ -185,7 +185,7 @@ export const ResumeButton = styled.a`
     max-width: 300px;
     text-align: center;
     padding: 16px 0;
-    color:${({ theme }) => theme.black};
+    color:${({ theme }) => theme.button_text};
     border-radius: 20px;
     cursor: pointer;
     font-size: 20px;
@@ -201,8 +201,6 @@ export const ResumeButton = styled.a`
     /* For WebKit */
     background: -webkit-linear-gradient(225deg, hsla(180, 80%, 40%, 1) 0%, hsla(210, 80%, 40%, 1) 100%);
 
-    box-shadow:  20px 20px 60px #1F2634,
-    -20px -20px 60px #1F2634;
     &:hover {
         transform: scale(1.05);
     transition: all 0.4s ease-in-out;

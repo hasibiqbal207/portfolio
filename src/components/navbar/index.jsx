@@ -7,7 +7,7 @@ import NavLinks from "./NavLinks";
 import MobileMenuComponent from "./MobileMenu";
 import ThemeSwitch from "./ThemeSwitch";
 import LanguageSelector from "./LanguageSelector";
-const Navbar = () => {
+const Navbar = ({darkMode, setDarkMode}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -29,7 +29,7 @@ const Navbar = () => {
 
         <ButtonContainer>
           {/* Dark & Light Theme Switcher */}
-          {/* <ThemeSwitch /> */}
+          <ThemeSwitch darkMode={darkMode} setDarkMode={setDarkMode}/>
 
           {/* Language Selector */}
           {/* <LanguageSelector /> */}

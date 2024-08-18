@@ -1,8 +1,10 @@
 import { Link as LinkRouter } from "react-router-dom";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 import styled from "styled-components";
 
 export const Nav = styled.div`
-  background-color: black;
+  background-color: ${({ theme }) => theme.bg};
   height: 80px;
   display: flex;
   align-items: center;
@@ -231,4 +233,12 @@ export const MobileNavLogo = styled(LinkRouter)`
   @media (max-width: 640px) {
     padding: 0 0px;
   }
+`;
+
+export const CustomLightModeIcon = styled(LightModeIcon)`
+  color: ${({ theme }) => theme.lightIcon};
+`;
+
+export const CustomDarkModeIcon = styled(DarkModeIcon)`
+  color: ${({ theme }) => theme.darkIcon};
 `;

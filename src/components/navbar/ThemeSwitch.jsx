@@ -1,12 +1,17 @@
 import React, { useState } from "react";
+import { styled } from '@mui/material/styles';
 
 import IconButton from "@mui/material/IconButton";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import Switch from '@mui/material/Switch';
+import {CustomLightModeIcon, CustomDarkModeIcon} from './styles';
 
-const ThemeSwitch = () => {
-  const [darkMode, setDarkMode] = useState(false);
+import theme from "../../theme";
+
+
+const ThemeSwitch = ({darkMode, setDarkMode}) => {
+  // const [darkMode, setDarkMode] = useState(false);
 
   const handleDarkModeToggle = () => {
     setDarkMode(!darkMode);
@@ -18,14 +23,14 @@ const ThemeSwitch = () => {
       onClick={handleDarkModeToggle}
       aria-label="toggle dark mode"
     >
-      <LightModeIcon />
+      <CustomLightModeIcon />
       <Switch
         checked={darkMode}
         onChange={handleDarkModeToggle}
         inputProps={{ "aria-label": "toggle dark mode" }}
         color="default"
       />
-      <DarkModeIcon />
+      <CustomDarkModeIcon />
     </IconButton>
   );
 };
