@@ -33,8 +33,7 @@ const Projects = ({ openModal, setOpenModal }) => {
       <Wrapper>
         <Title>Projects</Title>
         <Desc>
-          I have worked on a wide range of projects. From web apps to android
-          apps. Here are some of my projects.
+          Scroll down to explore some of my diverse projects, primarily focused on web applications.
         </Desc>
         <ToggleButtonGroup>
           {renderToggleButton("all", "All")}
