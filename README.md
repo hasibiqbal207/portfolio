@@ -59,34 +59,17 @@ This project was created using the following technologies.
 - Dot ENV ( To store secret variables )
 
 #### Database
- - Data is stored in 'Javascript Object' format. No Relational Database is used.
-
-### Containerization Overview
-
-#### Why the App is Containerized
-
-**1. Consistency Across Environments**: Containerizing the app ensures that it runs consistently across different environments (development, testing, staging, and production). By packaging the application and its dependencies into a single Docker image, you eliminate the "it works on my machine" problem, as the container behaves the same regardless of where it is deployed.
-
-**2. Simplified Dependency Management**: Docker containers bundle the application with all its dependencies, libraries, and runtime, making it easier to manage and deploy. This encapsulation prevents issues related to missing dependencies or version mismatches, ensuring that the correct versions of libraries and tools are always used.
-
-**3. Scalability**: Containerization makes scaling the application straightforward. Containers can be easily replicated and distributed across multiple servers or orchestrated using tools like Kubernetes. This allows the app to handle increased load efficiently by simply running more instances of the containers.
-
-**4. Isolation and Security**: Docker containers provide process isolation, which enhances security by keeping the application isolated from the host system and other containers. This reduces the risk of conflicts between applications and minimizes the attack surface.
-
-**5. Streamlined CI/CD Pipeline**: By using Docker, the app can be integrated into a CI/CD pipeline more easily. Containers can be built, tested, and deployed automatically, ensuring that every code change is validated in an environment identical to production.
-
-#### How the App is Containerized
-The application is containerized using Docker by creating a `Dockerfile` that defines the environment and dependencies for the app, and a `docker-compose.yml` file that manages multi-container configurations, enabling seamless deployment and scaling.
+- Data is stored in 'Javascript Object' format. No Relational Database is used.
 
 ## Getting Started
 
 ### Prerequisites
 Before you begin, ensure you have the following software and tools installed on your machine:
-   - **Node.js**: Version 14.x or higher. Download Node.js
-   - **npm or yarn**: Node.js package managers. npm comes bundled with Node.js. Install npm or Install yarn
+   - **Node.js**: Version 14.x or higher. [Download Node.js](https://nodejs.org/en/download/package-manager)
+   - **npm or yarn**: Node.js package managers. npm comes bundled with Node.js.
    - **Only if you are using Docker**
-      - **Docker**: Docker must be installed and running on your system. Install Docker
-      - **Docker Compose** : Comes bundled with Docker Desktop, or can be installed separately. Install Docker Compose 	[title](https://www.example.com)
+      - **Docker**: Docker must be installed and running on your system. [Install Docker](https://docs.docker.com/engine/install/)
+      - **Docker Compose** : Comes bundled with Docker Desktop, or can be installed separately.	[Install Docker Compose](https://docs.docker.com/compose/install/)
 
 
 ### Usage Instructions
@@ -151,7 +134,7 @@ Docker allows you to containerize your application, simplifying deployment acros
    - The simplest step is to use docker compose. To use docker compose, follow only **step 1**.
    - Alternatively, you can first build and then run the container. To do this, follow **step 2 & 3**.
 
-#### 1. Using Docker Compose**
+#### 1. Using Docker Compose
 
 To containerize your application, start by using docker compose. From the root directory of your project, use the following command to build the image:
 
@@ -182,7 +165,7 @@ To stop and remove the container, use the following command:
 docker compose down portfolio-dev
 ```
 
-**2. Build Docker Images**
+#### 2. Build Docker Images
 
 To containerize your application, start by building Docker images based on your environment. From the root directory of your project, use the following commands to build the image:
 
@@ -201,7 +184,7 @@ In these commands:
   - -t tags the image with a name (portfolio-dev or portfolio-prod).
 
 
-**3. Run Docker Containers** 
+#### 3. Run Docker Containers
 
 After building the images, you can run the containers using the docker run command.
 
