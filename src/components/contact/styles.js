@@ -40,7 +40,7 @@ export const Title = styled.div`
   }
 `;
 
-export const Desc = styled.div`
+export const Description = styled.div`
   font-size: 18px;
   text-align: center;
   max-width: 600px;

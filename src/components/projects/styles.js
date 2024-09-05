@@ -39,7 +39,7 @@ margin-top: 20px;
   }
 `;
 
-export const Desc = styled.div`
+export const Description = styled.div`
     font-size: 18px;
     text-align: center;
     max-width: 600px;

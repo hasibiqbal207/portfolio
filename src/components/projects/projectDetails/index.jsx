@@ -10,7 +10,7 @@ import {
   Date,
   Tags,
   Tag,
-  Desc,
+  Description,
   Label,
   Members,
   Member,
@@ -46,7 +46,7 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
               <Tag key={index}>{tag}</Tag>
             ))}
           </Tags>
-          <Desc>{project?.description}</Desc>
+          <Description>{project?.description}</Description>
           {project.member && (
             <>
               <Label>Members</Label>
@@ -78,9 +78,11 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
             <Button dull href={project?.github} target="new">
               View Code
             </Button>
-            {project?.webapp && <Button href={project?.webapp} target="new">
-              View Live App
-            </Button>}
+            {project?.webapp && (
+              <Button href={project?.webapp} target="new">
+                View Live App
+              </Button>
+            )}
           </ButtonGroup>
         </Wrapper>
       </Container>

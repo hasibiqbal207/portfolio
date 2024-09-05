@@ -6,7 +6,7 @@ import {
   Container,
   Wrapper,
   Title,
-  Desc,
+  Description,
   ContactForm,
   ContactTitle,
   ContactInput,
@@ -41,10 +41,10 @@ const Contact = () => {
     <Container id="contact">
       <Wrapper>
         <Title>Get in touch</Title>
-        <Desc>
+        <Description>
           Let’s have a chat! You can write me a message below. I will get back
           to you.
-        </Desc>
+        </Description>
 
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email</ContactTitle>

@@ -3,7 +3,7 @@ import {
   Container,
   Wrapper,
   Title,
-  Desc,
+  Description,
   ToggleButtonGroup,
   ToggleButton,
   Divider,
@@ -16,11 +16,9 @@ const Projects = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState("all");
 
   const renderToggleButton = (value, label) => (
-    <>
-      <ToggleButton active={toggle === value} onClick={() => setToggle(value)}>
-        {label}
-      </ToggleButton>
-    </>
+    <ToggleButton active={toggle === value} onClick={() => setToggle(value)}>
+      {label}
+    </ToggleButton>
   );
 
   const filteredProjects =
@@ -32,9 +30,10 @@ const Projects = ({ openModal, setOpenModal }) => {
     <Container id="projects">
       <Wrapper>
         <Title>Projects</Title>
-        <Desc>
-          Scroll down to explore some of my diverse projects, primarily focused on web applications.
-        </Desc>
+        <Description>
+          Scroll down to explore some of my diverse projects, primarily focused
+          on web applications.
+        </Description>
         <ToggleButtonGroup>
           {renderToggleButton("all", "All")}
           <Divider />

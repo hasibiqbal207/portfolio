@@ -34,23 +34,11 @@ const Document = styled.img`
   }
 `;
 
-const Description = styled.div`
-  width: 100%;
-  font-size: 15px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 99};
-  margin-bottom: 10px;
-  
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
-`;
-
 const Span = styled.span`
   overflow: hidden;
   display: -webkit-box;
   max-width: 100%;
-  
+
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
@@ -73,7 +61,6 @@ const Card = styled.div`
   &:hover {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     transform: translateY(-10px);
-
   }
   @media only screen and (max-width: 768px) {
     padding: 10px;
@@ -89,7 +76,7 @@ const Card = styled.div`
     overflow: visible;
     -webkit-line-clamp: unset;
   }
-  `;
+`;
 
 const Top = styled.div`
   width: 100%;
@@ -99,7 +86,7 @@ const Top = styled.div`
 
 const Image = styled.img`
   height: 50px;
-    background-color: ${({ theme }) => theme.bg};
+  background-color: ${({ theme }) => theme.bg};
 
   border-radius: 10px;
   margin-top: 4px;
@@ -141,21 +128,12 @@ const Notable = styled.div`
   }
 `;
 
-const Date = styled.div`
+const DATE = styled.div`
   font-size: 12px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_secondary + 80};
   @media only screen and (max-width: 768px) {
     font-size: 10px;
-  }
-`;
-
-const Grade = styled.div`
-  font-size: 14px;
-  font-weight: 500;
-  color: ${({ theme }) => theme.text_secondary + 99};
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
   }
 `;
 
@@ -175,18 +153,19 @@ const EducationCard = ({ education }) => {
         <Body>
           <Name>{education.university}</Name>
           <Degree>{education.degree}</Degree>
-          <Date>{education.date}</Date>
+          <DATE>{education.date}</DATE>
         </Body>
       </Top>
       <Notable>Notable Courses Completed: </Notable>
       {/* <Description> */}
       <SkillList>
-        {education?.majorCourses?.map((course) => (<SkillItem key={course.id}>{course.name}</SkillItem>))}
-      {/* </Description> */}
+        {education?.majorCourses?.map((course) => (
+          <SkillItem key={course.id}>{course.name}</SkillItem>
+        ))}
+        {/* </Description> */}
       </SkillList>
     </Card>
   );
 };
 
 export default EducationCard;
-

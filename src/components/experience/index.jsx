@@ -50,7 +50,7 @@ margin-top: 20px;
   }
 `;
 
-const Desc = styled.div`
+const Description = styled.div`
     font-size: 18px;
     text-align: center;
     max-width: 600px;
@@ -79,9 +79,9 @@ const index = () => {
         <Container id="experience">
             <Wrapper>
                 <Title>Experience</Title>
-                <Desc>
+                <Description>
                     My work experience as a software engineer and working on different companies and projects.
-                </Desc>
+                </Description>
                 <TimelineSection>
                     <Timeline>
                         {experiences.map((experience,index) => (
