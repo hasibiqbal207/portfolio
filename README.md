@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://www.hasibiqbal.dev">
-    <img src="https://github.com/tuzup/SplitApp/blob/master/client/public/static/logo.png?raw=true" alt="Logo" width="80" height="80">
+    <img src="public/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h2 align="center">Hasib's Portfolio</h2>
@@ -10,8 +10,8 @@
   <p align="center">
     Portfolio website built with React.
     <br />
-    <a href="https://github.com/hasibiqbal207/portfolio"><strong>Explore the docs »</strong></a>
-    <br />
+    <!-- <a href="https://github.com/hasibiqbal207/portfolio"><strong>Explore the docs »</strong></a>
+    <br /> -->
     <br />
     <a href="https://www.hasibiqbal.dev">View Demo</a>
     ·
@@ -21,17 +21,16 @@
   </p>
 </div>
   
-<!-- ![SplitApp](https://raw.githubusercontent.com/tuzup/SplitApp/master/Screenshots/dashboard-main-transparent.png) -->
-
 ## Portfolio Web Application 
 
   * [Project Overview](#Project-Overview)
-  * [Getting Started](#Getting-Started)
   * [Technologies used](#technologies-used)
       - [Frontend](#frontend)
-      - [Backend](#backend)
       - [Database](#database)
-  * [Configuration and Setup](#configuration-and-setup)
+  * [Getting Started](#getting-started)
+      - [Prerequisites](#prerequisites)
+      - [Usage Instructions](#usage-instructions)
+  * [Contributing](#contributing)
   * [License](#license)
 
 ## Project Overview
@@ -81,7 +80,8 @@ The application is containerized using Docker by creating a `Dockerfile` that de
 
 ## Getting Started
 
-**Prerequisites:** Before you begin, ensure you have the following software and tools installed on your machine:
+### Prerequisites
+Before you begin, ensure you have the following software and tools installed on your machine:
    - **Node.js**: Version 14.x or higher. Download Node.js
    - **npm or yarn**: Node.js package managers. npm comes bundled with Node.js. Install npm or Install yarn
    - **Only if you are using Docker**
@@ -89,12 +89,9 @@ The application is containerized using Docker by creating a `Dockerfile` that de
       - **Docker Compose** : Comes bundled with Docker Desktop, or can be installed separately. Install Docker Compose 	[title](https://www.example.com)
 
 
-**Installation Instructions:**  
+### Usage Instructions
 In order to run this project locally, simply fork and clone the repository or download as zip and unzip on your machine. You can also use Docker to build and run the project. 
 
-**Note**: 
-   - If you are not using Docker, only use step 1 to 4.
-   - If you are using Docker, skip step 3 & 4.
 
 **1. Clone the Repository** \
 Start by cloning the repository to your local machine using git:
@@ -112,6 +109,8 @@ VITE_EMAIL_SERVICE_ID='value from emailjs'
 VITE_EMAIL_TEMPLATE_ID='value from emailjs'
 VITE_EMAIL_USER_ID='value from emailjs'
 ```
+
+**Note**: If you are using Docker, jump to [Running the Application with Docker](#running-the-application-with-docker) section.
 
 **3. Install Dependencies** \
 Navigate to the portfolio directory and install the necessary dependencies:
@@ -145,44 +144,108 @@ npm run preview
 
 After you've built your application with the command `npm run build`, running `npm run preview` will start a local server that serves the production-ready files, allowing you to test the final output as it would appear in a live environment.
 
-**5. Build and Run Containers** \
-Docker allows you to containerize your application and run it with ease.
+### Running the Application with Docker
+Docker allows you to containerize your application, simplifying deployment across different environments. Below are steps to build, run, and manage your Docker containers for both development and production environments.
 
-1. Build and Run Containers
-From the root directory of the project, run the following command to build the image:
+**Note**: 
+   - The simplest step is to use docker compose. To use docker compose, follow only **step 1**.
+   - Alternatively, you can first build and then run the container. To do this, follow **step 2 & 3**.
 
-```
-## Choose either one of the following commands.
+#### 1. Using Docker Compose**
 
-# Build the Docker image for Development environment
-docker build -t portfolio-dev -f Dockerfile.dev .
+To containerize your application, start by using docker compose. From the root directory of your project, use the following command to build the image:
 
-# Build the Docker image for Production environment
-docker build -t portfolio-prod -f Dockerfile.prod .
-```
-
-To run the containers, run the following command:
+To start the portfolio-dev service:
 
 ```
-## Choose either one of the following commands. Add -d to run the containers in the background.
+docker compose up portfolio-dev --build
+```
 
-# Run the container from the Docker image for Development environment
+To start the portfolio-prod service:
+```
+docker compose up portfolio-prod --build
+```
+
+In these commands:
+  - By adding the service name (e.g., portfolio-dev or portfolio-prod) after the up command, it will only start that specific service, rather than starting all services defined in the file.
+  - --build: This flag forces Docker Compose to rebuild the images before starting the services, even if an image already exists in the cache.
+
+If you want to run the containers in the background, add the -d flag to either command:
+
+```
+docker compose up -d portfolio-dev --build
+```
+
+To stop and remove the container, use the following command:
+
+```
+docker compose down portfolio-dev
+```
+
+**2. Build Docker Images**
+
+To containerize your application, start by building Docker images based on your environment. From the root directory of your project, use the following commands to build the image:
+
+**Development Environment:**
+```
+docker build -f docker/Dockerfile.dev -t portfolio-dev .
+```
+
+**Production Environment:**
+```
+docker build -f docker/Dockerfile.prod -t portfolio-prod .
+```
+
+In these commands:
+  - -f specifies the path to the Dockerfile.
+  - -t tags the image with a name (portfolio-dev or portfolio-prod).
+
+
+**3. Run Docker Containers** 
+
+After building the images, you can run the containers using the docker run command.
+
+**Development Environment:**
+```
 docker run -p 6002:6002 portfolio-dev
+```
 
-# Run the container from the Docker image for Production environment
+**Production Environment:**
+```
 docker run -p 6002:6002 portfolio-prod
 ```
 
-<!-- This command will:
-   - Build the Docker images for both the frontend and backend.
-   - Start the containers.
-   - The backend will be accessible on http://localhost:5000.
-   - The frontend will be accessible on http://localhost:3000. -->
+In these commands:
+  - -p 6002:6002 maps port 6002 of the container to port 6002 on your machine.
+  - -To run the container in the background, add the -d flag (e.g., docker run -d -p 6002:6002 portfolio-dev).
 
-**2. Stop and Remove Containers** \
-To stop the running containers:
+## Contributing
+Please Visit [Contributing](CONTRIBUTING.md) file for more details.
 
-```
-docker-compose down
-```
-This will stop and remove the containers, but the volumes (like database data) will persist.
+## License
+The software in this project is licensed under the Apache License 2.0, a permissive open-source license. By using this software, you agree to the following terms:
+
+**Summary of the Apache License 2.0**
+
+1. **Freedom to Use**: You can use the software for any purpose, including commercial use, without paying royalties.
+2. **Modification and Distribution**: You can modify the software and distribute it in either its original or modified form, as long as you include the original license and clearly mark any changes you made.
+3. **Patent Rights**: The license grants you rights to any patents held by the contributors related to the software, but if you sue anyone over patent issues involving the software, your license and patent rights terminate.
+4. **No Trademark Rights**: The license doesn’t grant permission to use the names, trademarks, or logos of the contributors.
+5. **No Warranty**: The software is provided "as is," without any warranties, meaning the contributors aren't responsible for any issues or damages that arise from using it.
+6. **Optional Support**: If you offer warranties, support, or assume additional liability when redistributing the software, you're responsible for those obligations, not the original contributors.
+
+**Copyright Notice**
+
+    Copyright 2024 Hasib Iqbal
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
