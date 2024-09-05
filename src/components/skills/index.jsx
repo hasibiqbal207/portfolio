@@ -6,12 +6,12 @@ import {
   Wrapper,
   Title,
   Description,
-  SkillContainer,
-  SkillCard,
+  SubContainer,
+  Card,
   SkillTitle,
-  SkillList,
-  SkillItem,
-  SkillImage,
+  List,
+  Item,
+  Image,
 } from "./styles.js";
 
 const Skills = () => {
@@ -23,21 +23,21 @@ const Skills = () => {
           Here are some of my skills on which I have been working on
         </Description>
 
-        <SkillContainer>
+        <SubContainer>
           {skillTypes.map((skillByType) => (
-            <SkillCard key={skillByType.id}>
+            <Card key={skillByType.id}>
               <SkillTitle>{skillByType.title}</SkillTitle>
-              <SkillList>
+              <List>
                 {skillByType.skills.map((skill) => (
-                  <SkillItem key={skill.id}>
-                    <SkillImage src={skill.image} />
+                  <Item key={skill.id}>
+                    <Image src={skill.image} />
                     {skill.name}
-                  </SkillItem>
+                  </Item>
                 ))}
-              </SkillList>
-            </SkillCard>
+              </List>
+            </Card>
           ))}
-        </SkillContainer>
+        </SubContainer>
       </Wrapper>
     </Container>
   );

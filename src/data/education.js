@@ -1,8 +1,7 @@
-
 export const education = [
   {
     id: 0,
-    img: '/images/university/hochschule_fulda_logo.png',
+    img: "/images/university/hochschule_fulda_logo.png",
     university: "Fulda University of Applied Sciences, Germany.",
     degree: "MSc in Global Software Development",
     date: "Oct 2020 - Present",
@@ -36,7 +35,7 @@ export const education = [
   },
   {
     id: 1,
-    img: '/images/university/KUET-logo.png',
+    img: "/images/university/KUET-logo.png",
     university: "Khulna University of Engineering & Technology, Bangladesh.",
     degree: "Bachelor of Science (BSc) in Computer Science and Engineering",
     date: "Apr 2015 - Feb 2019",

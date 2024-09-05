@@ -1,4 +1,3 @@
-// theme.ts
 const theme = {
   // Temp fonts
   fonts: {
@@ -24,7 +23,7 @@ const theme = {
     lg: "screen and (max-width: 1024px)",
     xl: "screen and (max-width: 1280px)",
   },
-  // Themes  #854CE6 #1575B8 #1493B8
+  // Themes
   themes: {
     dark: {
       bg: "#000000",

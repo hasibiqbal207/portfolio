@@ -2,14 +2,12 @@ import React from "react";
 import {
   HeroContainer,
   HeroLeftContainer,
-  HeroRightContainer,
   HeroInnerContainer,
   TextLoop,
   Title,
   Span,
   SubTitle,
   ResumeButton,
-  Img,
 } from "./styles.js";
 import Typewriter from "typewriter-effect";
 import { Bio } from "../../data/biograph.js";
@@ -22,7 +20,8 @@ const HeroSection = () => {
           <HeroLeftContainer id="Left">
             <Title>
               Hello!
-              <br />I'm {Bio.name}
+              <br />
+              I'm {Bio.name}
             </Title>
             <TextLoop>
               <Span>

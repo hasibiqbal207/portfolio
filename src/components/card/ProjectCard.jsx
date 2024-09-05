@@ -82,7 +82,7 @@ const Title = styled.div`
   text-overflow: ellipsis;
 `;
 
-const Date = styled.div`
+const DATE = styled.div`
   font-size: 12px;
   margin-left: 2px;
   font-weight: 400;
@@ -130,7 +130,7 @@ const ProjectCards = ({ project, setOpenModal }) => {
       </Tags>
       <Details>
         <Title>{project.title}</Title>
-        <Date>{project.date}</Date>
+        <DATE>{project.date}</DATE>
         <Description>{project.description}</Description>
       </Details>
       <Members>

@@ -2,7 +2,7 @@ export const Bio = {
   name: "Hasib Iqbal",
   roles: [
     "A Programmer.",
-    "A Software Engineer currently working in web technologies.", //specializing
+    "A Software Engineer currently working in web technologies.",
   ],
   description: `
     I consider myself a dedicated and detail-oriented software engineer with a passion for creating innovative and 

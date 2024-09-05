@@ -52,19 +52,6 @@ export const Description = styled.div`
   }
 `;
 
-export const ToggleButtonGroup = styled.div`
-  display: flex;
-  border: 1.5px solid ${({ theme }) => theme.primary};
-  color: ${({ theme }) => theme.primary};
-  font-size: 16px;
-  border-radius: 12px;
-  font-weight: 500;
-  margin: 22px 0px;
-  @media (max-width: 768px) {
-    font-size: 12px;
-  }
-`;
-
 export const ToggleButton = styled.div`
   padding: 8px 18px;
   border-radius: 6px;
@@ -80,6 +67,19 @@ export const ToggleButton = styled.div`
   @media (max-width: 768px) {
     padding: 6px 8px;
     border-radius: 4px;
+  }
+`;
+
+export const ToggleButtonGroup = styled.div`
+  display: flex;
+  border: 1.5px solid ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.primary};
+  font-size: 16px;
+  border-radius: 12px;
+  font-weight: 500;
+  margin: 22px 0px;
+  @media (max-width: 768px) {
+    font-size: 12px;
   }
 `;
 
