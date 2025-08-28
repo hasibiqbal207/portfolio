@@ -5,7 +5,7 @@ services:
       dockerfile: docker/Dockerfile.dev
     image: portfolio-dev
     ports:
-      - "6002:6002"
+      - "6000:6000"
     volumes:
       - ./:/app
       - /app/node_modules/
@@ -16,7 +16,7 @@ services:
       dockerfile: docker/Dockerfile.prod
     image: portfolio-prod
     ports:
-      - "6002:6002"
+      - "6000:6000"
     environment:
       NODE_ENV: production
     restart: always
